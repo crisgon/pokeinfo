@@ -66,6 +66,7 @@ function startApp(pokeName) {
 searchButton.addEventListener('click', event => {
   event.preventDefault();
   pokeName = searchInput.value.toLowerCase();
+  searchInput.value = '';
   startApp(pokeName);
   container.classList.add('fade');
 
