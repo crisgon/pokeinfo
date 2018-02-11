@@ -1,0 +1,180 @@
+/* Reset CSS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Main CSS */
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+
+body {
+  background-color: #FFC312;
+  font-family: 'Maven Pro', sans-serif;
+}
+  
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+
+.search {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+
+.search .search-input,
+.search .search-button {
+  border: 0;
+  padding: 1em;
+}
+
+.search .search-input {
+  width: 100%;
+}
+
+.search .search-button {
+  background-color: #2b75bb;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.error {
+  display: none;
+  font-size: 1.5em;
+}
+
+.pokemon {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.pokemon .pokemon-picture {
+  width: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.pokemon .pokemon-picture img {
+  width: 100%;
+}
+
+
+.pokemon .pokemon-info {
+  width: 100%;
+  background-color: #f2f2f2;
+  flex: 2;
+}
+
+.pokemon-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+
+.pokemon-info .name,
+.pokemon-info .number,
+.pokemon-info .type,
+.pokemon-info .skill,
+.pokemon-info .weight,
+.pokemon-info .height  {
+  width: 100%;
+  padding: .5em .2em;
+  font-size: 1.2em;
+}
+
+.pokemon-info .name {
+  font-size: 2em;
+}
+
+.pokemon-info .weight,
+.pokemon-info .height {
+  width: 50%;
+}
+
+.fade {
+  animation: fadeEfect 4s;
+}
+
+
+
+@media(min-width: 758px) {
+  .pokemon { 
+    flex-direction: row;  
+  }
+}
+
+@keyframes fadeEfect{
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
