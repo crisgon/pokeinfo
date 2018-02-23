@@ -142,8 +142,6 @@ body {
 
 
 .pokemon-info .name,
-/*.pokemon-info .number,
-.pokemon-info .type,*/
 .pokemon-info .skill,
 .pokemon-info .weight,
 .pokemon-info .height  {
@@ -159,8 +157,7 @@ body {
   font-weight: bold;
   text-transform: capitalize;
 }
-.pokemon-info .number,
-.pokemon-info .type{
+.pokemon-info .number{
   width: 100%;
   text-align: center;
   font-size: 1em;
