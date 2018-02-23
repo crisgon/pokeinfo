@@ -141,16 +141,31 @@ body {
 .pokemon-info .height  {
   width: 100%;
   padding: .5em .2em;
-  font-size: 1.2em;
+  font-size: 1.7em;
 }
 
 .pokemon-info .name {
   font-size: 2em;
+  text-align: center;
+  color: #FFC312; 
+  text-transform: capitalize;
 }
-
+.pokemon-info .number,
+.pokemon-info .type{
+  text-align: center;
+  font-size: 0.8em;
+}
+.pokemon-info .skill{
+  text-align: justify;
+  font-size: 1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .pokemon-info .weight,
 .pokemon-info .height {
   width: 50%;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .fade {
