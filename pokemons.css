@@ -145,9 +145,10 @@ body {
 }
 
 .pokemon-info .name {
-  font-size: 2em;
+  font-size: 2.3em;
   text-align: center;
   color: #FFC312; 
+  font-weight: bold;
   text-transform: capitalize;
 }
 .pokemon-info .number,
