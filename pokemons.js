@@ -18,9 +18,10 @@ function getElement(element) {
   return document.querySelector(element);
 }
 
+
 // Função responsavel por fazer requisições para a API e inserir as respostas na variavel pokemon
-function requestPokeInfo(url, name) {
-  fetch(url + name)
+async function requestPokeInfo(url, name) {
+  await fetch(url + name)
     .then(response => response.json())
     .then(data => {
       pokemon = data;
@@ -45,10 +46,8 @@ function createCard () {
 }
 
 // Função que faz a chamada das principais funções e inicia o app
-function startApp(pokeName) {
-  requestPokeInfo(baseUrl, pokeName);
-
-  setTimeout(function () {
+async function startApp(pokeName) {
+  await requestPokeInfo(baseUrl, pokeName);
     //Exibe uma mensagem caso o pokemon pesquisado não exista
     if(pokemon.detail) {
       erroMessage.style.display = 'block';
@@ -58,7 +57,6 @@ function startApp(pokeName) {
       container.style.display = 'flex';
       container.innerHTML = createCard();
     }
-  }, 2000);
 }
 
 // Add Events --------------------------------------------
