@@ -2,6 +2,7 @@
 const baseUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
 // Get Elements --------------------------------------------
+const getElement = document.querySelector.bind(document);
 const searchInput = getElement('.search-input'),
       searchButton = getElement('.search-button'),
       container = getElement('.pokemon'),
@@ -12,12 +13,6 @@ var pokeName, // Nome ou numero passado na caixa de busca
     card; // Responsavel por receber o HTML 
 
 // Build Functions --------------------------------------------
-
-// Função para reduzir a escrita na captura de elementos HTML
-function getElement(element) {
-  return document.querySelector(element);
-}
-
 
 // Função responsavel por fazer requisições para a API e inserir as respostas na variavel pokemon
 async function requestPokeInfo(url, name) {
